@@ -1,0 +1,352 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+.nav-contents{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+}
+.nav-contents .fa-bars, 
+.nav-contents .fa-times{
+  color: white;
+  font-size: 20px;
+  display: none;
+}
+.nav-left-content img{
+  width: 120px;
+  margin: 7px;
+  padding-left: 10px;
+}
+.nav-left-content:hover{
+  padding: 1px;
+  border: 1px solid white;
+}
+
+.nav-middle-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.nav-middle-content input{
+  background-color: white;
+  color: black;
+  padding: 7px;
+  width: 700px;
+  height: 40px;
+  border: none;
+  font-size: 17px;
+  border-radius: 2px;
+  padding-right: 40px;
+}
+.nav-middle-content input:focus{
+  outline: none;
+  border: 2px solid rgb(245, 160, 4);
+}
+.nav-middle-content button{
+  position: absolute;
+  border: none;
+  outline: none;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.nav-middle-content img{
+  position: absolute;
+  right: 0;
+  width: 40px;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: rgb(255, 174, 0);
+}
+.nav-right-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin: 7px;
+  gap: 20px;
+  padding-right: 15px;
+  font-size: 17px;
+  position: relative;
+}
+.nav-right-content .fa-times {
+  font-size: 20px;
+}
+.nav-right-content a{
+  color: white;
+  text-decoration: none;
+}
+.return-anchor:hover{
+  padding: 1px;
+  border: 1px solid white;
+}
+.anchor-content:hover{
+  padding: 1px;
+  border: 1px solid white;
+}
+.return-anchor:hover{
+  display: block;
+  border: 1px solid white;
+}
+.nav-right-content .cart-icon{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.cart-icon .cart-quantity{
+  position: absolute;
+  top: 2px;
+  left: 22px;
+  color: rgb(250, 153, 7);
+  font-weight: bold
+}
+.nav-right-content .cart-icon img{
+  width: 50px;
+}
+
+.header-order{
+  width: 70%;
+  margin: auto;
+}
+.header-order h4{
+  margin: 20px 0;
+  font-size: 22px;
+}
+.order-content-grid{
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 20px;
+}
+.order-details{
+  border: 2px solid rgb(228, 228, 228);
+  margin-bottom: 20px;
+  width: 80%;
+  margin: auto;
+  font-size: 18px;
+}
+.placed-order{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(245, 243, 243);
+  padding: 13px;
+  flex-shrink: 0;
+}
+.placed-order-details{
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  gap: 40px;
+}
+
+.order-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+.order-items-content{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.order-items-content img{
+  width: 100px;
+  height: 90px;
+}
+.order-cart-details{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.buy-again-button button{
+  background-color: yellow;
+  border: none;
+  padding: 5px;
+  width: 130px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.track-package-button{
+  padding: 10px;
+}
+.track-package-button a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+  background: none;
+  border: 1px solid rgb(228, 228, 228);
+  width: 200px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 0 5px rgb(117, 117, 117);
+}
+
+@media screen and (max-width: 1200px) {
+.nav-middle-content input{
+  padding: 7px;
+  max-width: 350px;
+  height: 30px;
+  border: none;
+  font-size: 17px;
+  border-radius: 2px;
+  padding-right: 40px;
+}
+.nav-middle-content img{
+  width: 30px;
+  padding: 3px;
+}
+}
+
+@media screen and (max-width: 768px) {
+.nav-contents .fa-bars{
+  display: block;
+}
+.nav-middle-content input{
+  max-width: 300px;
+}
+.nav-right-content{
+  flex-direction: column;
+  margin: 0px;
+  gap: 20px;
+  padding-right: 0px;
+  font-size: 17px;
+  position: fixed;
+  right: 7px;
+  top: 7%;
+  padding: 15px;
+  background-color: rgb(24, 24, 24);
+  display: none;
+}
+
+}
+
+@media screen and (max-width: 700px) {
+.nav-contents .fa-bars{
+  display: block;
+}
+.nav-left-content img{
+  width: 80px;
+  margin: 0px;
+  padding-left: 10px;
+}
+.nav-middle-content{
+  position: relative;
+}
+.nav-middle-content input{
+  padding: 7px;
+  max-width: 200px;
+  height: 30px;
+  border: none;
+  font-size: 17px;
+  border-radius: 2px;
+  padding-right: 40px;
+}
+
+.nav-middle-content img{
+  width: 30px;
+  padding: 3px;
+}
+.nav-right-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin: 0px;
+  gap: 20px;
+  padding-right: 0px;
+  font-size: 17px;
+  position: fixed;
+  right: 7px;
+  top: 10%;
+  padding: 10px;
+  background-color: rgb(24, 24, 24);
+  display: none;
+}
+
+.header-order{
+  width: 95%;
+  margin: auto;
+}
+
+.order-details{
+  border: 2px solid rgb(228, 228, 228);
+  margin-bottom: 20px;
+  width: 95%;
+  margin: auto;
+  font-size: 18px;
+}
+.placed-order{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+.placed-order-details{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.order-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+.order-items-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.order-data{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.order-data p {
+  font-size: 15px;
+}
+
+}
+
+@media screen and (max-width: 430px) {
+  .nav-right-content{
+    top: 7%;
+  }
+}
+@media screen and (max-width: 412px) {
+  .nav-right-content{
+    top: 8%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .nav-right-content{
+    top: 7%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-middle-content input{
+    max-width: 150px;
+  }
+}
