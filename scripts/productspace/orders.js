@@ -241,14 +241,14 @@ let date = new Date().toLocaleString('en-US',{
 
 const bars = document.querySelector('.js-bars');
 const times = document.querySelector('.js-times');
-bars.addEventListener('click', ()=> {
+bars?.addEventListener('click', ()=> {
   const rightContent = document.querySelector('.js-right-content')
   rightContent.style.display = 'flex'
   bars.style.display = 'none'
   times.style.display = 'block'
 })
 
-times.addEventListener('click', ()=> {
+times?.addEventListener('click', ()=> {
   const rightContent = document.querySelector('.js-right-content')
   rightContent.style.display = 'none'
   bars.style.display = 'block'
